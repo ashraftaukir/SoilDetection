@@ -1,48 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
 
-    <TextView
-        android:id="@+id/column1"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="4dp"
-        android:text="Column 1" />
+        android:padding="8dp">
 
-    <TextView
-        android:id="@+id/column2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="4dp"
-        android:text="Column 2" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="10dp" />
 
-    <TextView
-        android:id="@+id/column3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="4dp"
-        android:text="Column 3" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="10dp" />
 
-    <TextView
-        android:id="@+id/column4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="4dp"
-        android:text="Column 4" />
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Date"
+            android:fontFamily="@font/rubik_semi_bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
-    <TextView
-        android:id="@+id/column5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="4dp"
-        android:text="Column 5" />
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:fontFamily="@font/rubik_regular"
+            app:layout_constraintTop_toBottomOf="@+id/dateTv"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end_vertical"
+            android:text="Time" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/nitrogenTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="Nitrogen" />
+
+        <TextView
+            android:id="@+id/nitrogenValueTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/nitrogenTv"
+            app:layout_constraintTop_toTopOf="@+id/nitrogenTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="11" />
+
+        <TextView
+            android:id="@+id/nitrogenUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/nitrogenValueTv"
+            app:layout_constraintTop_toTopOf="@+id/nitrogenTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="mg/kg" />
+
+        <TextView
+            android:id="@+id/phosphorusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/nitrogenTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="Phosphorus" />
+
+        <TextView
+            android:id="@+id/phosphorusValueTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/phosphorusTv"
+            app:layout_constraintTop_toTopOf="@+id/phosphorusTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="15" />
+
+        <TextView
+            android:id="@+id/phosphorusUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/phosphorusValueTv"
+            app:layout_constraintTop_toTopOf="@+id/phosphorusTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="mg/kg" />
+
+        <TextView
+            android:id="@+id/potassiumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/phosphorusTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="Potassium" />
+
+        <TextView
+            android:id="@+id/potassiumValueTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/potassiumTv"
+            app:layout_constraintTop_toTopOf="@+id/potassiumTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="7" />
+
+        <TextView
+            android:id="@+id/potassiumUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/phosphorusValueTv"
+            app:layout_constraintTop_toTopOf="@+id/potassiumTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="mg/kg" />
+
+<!--        -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
