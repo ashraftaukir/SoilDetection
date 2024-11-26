@@ -68,7 +68,7 @@
             app:layout_constraintTop_toTopOf="@+id/nitrogenTv"
             android:fontFamily="@font/rubik_semi_bold"
             android:padding="4dp"
-            android:text="11" />
+            android:text="0" />
 
         <TextView
             android:id="@+id/nitrogenUnitTv"
@@ -98,7 +98,7 @@
             app:layout_constraintTop_toTopOf="@+id/phosphorusTv"
             android:fontFamily="@font/rubik_semi_bold"
             android:padding="4dp"
-            android:text="15" />
+            android:text="0" />
 
         <TextView
             android:id="@+id/phosphorusUnitTv"
@@ -128,7 +128,7 @@
             app:layout_constraintTop_toTopOf="@+id/potassiumTv"
             android:fontFamily="@font/rubik_semi_bold"
             android:padding="4dp"
-            android:text="7" />
+            android:text="0" />
 
         <TextView
             android:id="@+id/potassiumUnitTv"
@@ -140,7 +140,95 @@
             android:padding="4dp"
             android:text="mg/kg" />
 
-<!--        -->
+
+        <TextView
+            android:id="@+id/phTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/potassiumTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="pH" />
+
+        <TextView
+            android:id="@+id/phValueTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/phTv"
+            app:layout_constraintTop_toTopOf="@+id/phTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/temperatureTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/phValueTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="TEM" />
+
+        <TextView
+            android:id="@+id/temperatureValueTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/temperatureTv"
+            app:layout_constraintTop_toTopOf="@+id/temperatureTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="0" />
+        <TextView
+            android:id="@+id/humidityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="HUM" />
+
+        <TextView
+            android:id="@+id/humidityValueTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/humidityTv"
+            app:layout_constraintTop_toTopOf="@+id/humidityTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/ecTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/humidityTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="EC" />
+
+        <TextView
+            android:id="@+id/ecValueTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/ecTv"
+            app:layout_constraintTop_toTopOf="@+id/ecTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="7" />
+
+        <TextView
+            android:id="@+id/ecValueUnitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/ecValueTv"
+            app:layout_constraintTop_toTopOf="@+id/ecTv"
+            android:fontFamily="@font/rubik_semi_bold"
+            android:padding="4dp"
+            android:text="us/cm" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

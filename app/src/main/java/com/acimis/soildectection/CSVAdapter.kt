@@ -6,7 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CSVAdapter(private val dataList: List<List<String>>) : RecyclerView.Adapter<CSVAdapter.CSVViewHolder>() {
+class CSVAdapter(private val dataList: List<List<String>>) :
+    RecyclerView.Adapter<CSVAdapter.CSVViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CSVViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.row_item, parent, false)
@@ -15,18 +16,27 @@ class CSVAdapter(private val dataList: List<List<String>>) : RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: CSVViewHolder, position: Int) {
         val row = dataList[position]
-        if (row.size >= 13) { // Ensure you have at least 5 columns
+        if (row.size >= 21) { // Ensure you have at least 5 columns
             holder.dateTv.text = row[2]
             holder.timeTv.text = row[3]
-            holder.nitrogenTv.text = row[4]
+            if (row[4] == "N")
+                holder.nitrogenTv.text = "Nitrogen"
             holder.nitrogenValueTv.text = row[5]
             holder.nitrogenUnitTv.text = row[6]
-            holder.phosphorusTv.text = row[7]
+            if (row[7] == "P")
+                holder.phosphorusTv.text = "Phosphorus"
             holder.phosphorusValueTv.text = row[8]
             holder.phosphorusUnitTv.text = row[9]
-            holder.potassiumTv.text = row[10]
+            if (row[10] == "K")
+                holder.potassiumTv.text = "Potassium"
             holder.potassiumValueTv.text = row[11]
             holder.potassiumUnitTv.text = row[12]
+            holder.phTv.text = row[13]
+            holder.phValueTv.text = row[14]
+            holder.temperatureTv.text = row[16]
+            holder.temperatureValueTv.text = row[17]
+            holder.humidityTv.text = row[19]
+            holder.humidityValueTv.text = row[20]
         }
     }
 
@@ -46,5 +56,11 @@ class CSVAdapter(private val dataList: List<List<String>>) : RecyclerView.Adapte
         val potassiumTv: TextView = itemView.findViewById(R.id.potassiumTv)
         val potassiumValueTv: TextView = itemView.findViewById(R.id.potassiumValueTv)
         val potassiumUnitTv: TextView = itemView.findViewById(R.id.potassiumUnitTv)
+        val phTv: TextView = itemView.findViewById(R.id.phTv)
+        val phValueTv: TextView = itemView.findViewById(R.id.phValueTv)
+        val temperatureTv: TextView = itemView.findViewById(R.id.temperatureTv)
+        val temperatureValueTv: TextView = itemView.findViewById(R.id.temperatureValueTv)
+        val humidityTv: TextView = itemView.findViewById(R.id.humidityTv)
+        val humidityValueTv: TextView = itemView.findViewById(R.id.humidityValueTv)
     }
 }

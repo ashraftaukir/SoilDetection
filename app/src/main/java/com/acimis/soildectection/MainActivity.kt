@@ -80,9 +80,9 @@ class MainActivity : AppCompatActivity() {
                     var line = reader.readLine()
                     while (line != null) {
                         val columns = line.split(",")
-                        if (columns.size >= 13) {
+                        if (columns.size >= 21) {
                             // Add first 8 columns (you can adjust this if you want more)
-                            dataList.add(columns.take(13))
+                            dataList.add(columns.take(21))
                         }
                         line = reader.readLine()
                     }
