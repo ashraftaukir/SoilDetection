@@ -34,9 +34,9 @@ class CSVAdapter(private val dataList: List<List<String>>) :
             holder.phTv.text = row[13]
             holder.phValueTv.text = row[14]
             holder.temperatureTv.text = row[16]
-            holder.temperatureValueTv.text = row[17]
+            holder.temperatureValueTv.text = "${row[17]}°C"
             holder.humidityTv.text = row[19]
-            holder.humidityValueTv.text = row[20]
+            holder.humidityValueTv.text = "${row[20]}%"
         }
     }
 
